@@ -11,8 +11,16 @@ import rootReducer from './reducers/index';
 import comments from './data/comments';
 import posts from './data/posts';
 
-// create object for your default data.
+// create object for your default data
 const defaultState = {
 	posts: posts,
 	comments: comments
-}
+};
+
+// takes two things, rootReducer to interface with it, and the default state
+const store = createStore(rootReducer, defaultState);
+
+// make going from page to page, keep track, and weave in the store to be accessible to other files
+export const history = syncHistoryWithStore(browserHistory, store);
+
+export default store;
