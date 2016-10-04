@@ -13,6 +13,7 @@ export function increment(index) {
 // add comment
 // with es6 you just need postId, not postId: postId (es6 thing), same with other functions
 export function addComment(postId, author, comment) {
+	{/* console.log("Dispatching add comment"); */}
 	return {
 		type: 'ADD_COMMENT',
 		postId,
