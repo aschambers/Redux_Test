@@ -5,6 +5,7 @@
 
 // use es6 default parameters to set initial state = []
 function posts(state = [], action) {
+	console.log("The post will change right??")
 	console.log(state, action);
 	return state;
 }

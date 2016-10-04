@@ -1,3 +1,7 @@
+// note: only components can be hot-reloaded!, which is why sometimes you get: modules couldn't be updated in the console
+// will dispatch the action by console logging: $r.store.dispatch({type: 'INCREMENT_LIKES', index: 0});
+// every time you dispatch an action, every reducer will run, and whether you chose to act on that action
+// or not is up to the reducer, we need a switch statement to handle action types
 // increment likes
 // actions are just objects that have a type (name of action), and the index
 export function increment(index) {

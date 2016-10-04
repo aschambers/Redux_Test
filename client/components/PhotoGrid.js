@@ -7,7 +7,9 @@ const Single = React.createClass({
 	render() {
 		return (
 			<div className="single-photo">
-				I am the single-photo.
+				<pre>
+					{JSON.stringify(this.props.posts,null,'')}
+				</pre>
 			</div>
 		)
 	}
