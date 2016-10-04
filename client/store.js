@@ -23,4 +23,12 @@ const store = createStore(rootReducer, defaultState);
 // make going from page to page, keep track, and weave in the store to be accessible to other files
 export const history = syncHistoryWithStore(browserHistory, store);
 
+// make reducers hot
+if(module.hot) {
+	module.hot.accept('./reducers/',() => {
+		const nextRootReducer = require('./reducers/index').default;
+		store.replaceReducer(nextRootReducer);
+	})
+}
+
 export default store;

@@ -17,6 +17,26 @@ import { Provider } from 'react-redux';
 // import our store for components
 import store, { history } from './store';
 
+// import sentry error tracker
+import Raven from 'raven-js';
+import { sentry_url } from './data/config';
+
+// use the raven module with sentry error tracking
+Raven.config(sentry_url, {
+	tags: {
+		git_commit: 'asdfas9d08f',
+		userLevel: 'editor'
+	}
+}).install();
+// log error 
+// console.log(window.doesNotExist.nope);
+// logException(new Error('download failed!'), {
+// 	email: 'test@gmail.com'
+// })
+// console.log(store.doesNot.nope());
+// Raven.captureMessage('Something Bad Happened!');
+// Raven.showReportDialog();
+
 // need to build route component
 const router = (
 	<Provider store={store}>
