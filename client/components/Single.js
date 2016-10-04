@@ -3,14 +3,14 @@ import React from 'react';
 // Link is used for routing with react-router
 import { Link } from 'react-router';
 
-const PhotoGrid = React.createClass({
+const Single = React.createClass({
 	render() {
 		return (
-			<div className="photo-grid">
-				I am the photo-grid.
+			<div className="single-photo">
+				I am the single
 			</div>
 		)
 	}
 })
 
-export default PhotoGrid;
+export default Single;
