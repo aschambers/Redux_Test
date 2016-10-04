@@ -5,7 +5,6 @@
 
 // use es6 default parameters to set initial state = []
 function comments(state = [], action) {
-	console.log(state, action);
 	return state;
 }
 
